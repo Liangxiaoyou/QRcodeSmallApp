@@ -1,0 +1,7 @@
+<view class="container">
+  <image class="img-box"src="/images/test.png"></image>
+  <view>
+      <button  type="primary" bindtap="jumpToChange">更新口令</button>
+      <button bindtap="jumpToIntro">介绍</button>
+  </view>
+</view>

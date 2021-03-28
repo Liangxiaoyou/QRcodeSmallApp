@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/QRcode/QRcode",
+    "pages/changePassword/changePassword",
+    "pages/introduction/introduction"
+   
+  ],
+ "window": {  "navigationBarBackgroundColor":"#fff",
+  "navigationBarTextStyle": "black"}
+
+}

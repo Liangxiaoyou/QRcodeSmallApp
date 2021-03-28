@@ -1,0 +1,6 @@
+<view class="container1">
+  <text>介绍文档</text>
+  <text>小程序使用微信号和口令来生成散列码的二维码</text>
+  <text>初始口令默认为123456</text>
+  <text>本项目用于课程作业</text>
+</view>
