@@ -1,7 +1,12 @@
 <view class="container">
-  <image class="img-box"src="/images/test.png"></image>
-  <view>
-      <button  type="primary" bindtap="jumpToChange">更新口令</button>
-      <button bindtap="jumpToIntro">介绍</button>
-  </view>
+    <image class="img-box"src="{{imagePath}}"></image>
+    <view>
+      <view>{{time}}</view>
+        <button type="primary" bindtap="showQR">生成二维码</button>
+        <button bindtap="jumpToChange">设置</button>
+        <button bindtap="jumpToIntro">小程序说明</button>
+    </view>
+</view>
+<view class="canvas-box">
+      <canvas style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas" />
 </view>
