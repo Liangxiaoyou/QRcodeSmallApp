@@ -125,7 +125,7 @@ showQR:function(){
 makeInfo:function(){
   var beforeHash = wx.getStorageSync('user_password')+getTime.timeNum(new Date);
   var result = HASH.sha256(beforeHash);
-  var nameAndHash = wx.getStorageSync('user_name')+result;
+  var nameAndHash = result+wx.getStorageSync('user_name');
   console.log(beforeHash)
   this.setData({
     info : nameAndHash,
