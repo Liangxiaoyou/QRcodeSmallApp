@@ -22,7 +22,7 @@ function timeNum(date) {
 
   var hour = date.getHours().toString()
   var minute = date.getMinutes().toString()
-  var second = date.getSeconds().toString()
+  //var second = date.getSeconds().toString()
   return year+month+day+hour+minute;
 }
 module.exports = {

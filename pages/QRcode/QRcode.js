@@ -7,17 +7,28 @@ Page({
     maskHidden:true,
     imagePath:"",//准备临时缓存图片路径
     time:"wrong",
+    timeNum: 0 ,
   },
 
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
     var size = this.setCanvasSize() //动态设置画布大小
     var initUrl = this.data.info
-
-    this.setData({
-      time:getTime.formatTime(new Date()),
-    })
-    this.createQrCode(initUrl, "mycanvas", size.w, size.h);
+    var that = this;//用this不行，为啥，是为了安全么？
+    setInterval(function (){
+      that.setData({
+        time:getTime.formatTime(new Date()),
+      });
+      var newTime = getTime.timeNum(new Date())
+      //console.log(that.data.timeNum)
+      //console.log(newTime)
+      if(that.data.timeNum !=newTime ){that.showQR()};
+      that.setData({
+        timeNum : newTime,
+      });
+      
+    },1000)
+    this.showQR()
   },
 
 jumpToIntro:function(){
@@ -111,12 +122,12 @@ showQR:function(){
 },
 
 makeInfo:function(){
-  var beforeHash = wx.getStorageSync('user_name')+wx.getStorageSync('user_password')+getTime.
-  timeNum(new Date);
+  var beforeHash = wx.getStorageSync('user_password')+getTime.timeNum(new Date);
   var result = HASH.sha256(beforeHash);
+  var nameAndHash = wx.getStorageSync('user_name')+result;
   console.log(beforeHash)
   this.setData({
-    info : result,
+    info : nameAndHash,
   })
   console.log(this.data.info)
 }
