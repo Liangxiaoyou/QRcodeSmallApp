@@ -107,10 +107,9 @@ showQR:function(){
   wx.showToast({
     title: '生成中...',
     icon: 'loading',
-    duration: 2000
+    duration: 100
   });
   var st = setTimeout(function () {
-    wx.hideToast()
     var size = that.setCanvasSize();
     //绘制二维码
     that.createQrCode(url, "mycanvas", size.w, size.h);
@@ -118,7 +117,7 @@ showQR:function(){
       maskHidden: true
     });
     clearTimeout(st);
-  }, 2000)
+  }, 100)
 },
 
 makeInfo:function(){
