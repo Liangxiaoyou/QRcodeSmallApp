@@ -65,6 +65,7 @@ setCanvasSize: function () {
     // Do something when catch error
     console.log("获取设备信息失败" + e);
   }
+  console.log(size);
   return size;
 },
 
@@ -113,6 +114,7 @@ showQR:function(){
     var size = that.setCanvasSize();
     //绘制二维码
     that.createQrCode(url, "mycanvas", size.w, size.h);
+    
     that.setData({
       maskHidden: true
     });

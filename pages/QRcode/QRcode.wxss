@@ -2,11 +2,22 @@
   padding: 40rpx;
   background-color: #fff;
   border-bottom: 1rpx solid #e5e5e5;
-  position: relative
+
 }
 
 .canvas-box {
     position: fixed;
-    top: 9999999rpx;
+    top: 99999rpx;
     left: 0
+}
+
+.img-box image {
+  width: 500rpx;
+  height: 500rpx;
+  background-color: #f9f9f9
+}
+.logo{
+  width:100rpx;
+  height:100rpx;
+  border-radius: 50%;
 }

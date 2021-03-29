@@ -30,3 +30,12 @@
   font-size: 34rpx;
   color: #000
 }
+
+.container2 {
+  background-color:rgb(196, 71, 71);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+} 

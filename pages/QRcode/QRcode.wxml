@@ -1,7 +1,12 @@
 <view class="container">
-    <image class="img-box"src="{{imagePath}}"></image>
-    <view>
-      <view>{{time}}</view>
+  <image class="logo"src="/images/logo3.png"></image>
+    <view  class="img-box">
+
+      <image mode="scaleToFill" src="{{imagePath}}"></image>
+      <view style="text-align:center;color:grey" >{{time}}</view>
+    </view>
+   
+    <view  >
         <button type="primary" bindtap="showQR">生成二维码</button>
         <button bindtap="jumpToChange">设置</button>
         <button bindtap="jumpToIntro">小程序说明</button>
