@@ -12,23 +12,25 @@ Page({
     })
   },
   formSubmit:function(e){
-    console.log(e);
-
     var appInstance = getApp()
-    appInstance.globalData.name=e.detail.value.name
+    console.log(e.detail.value) 
+    if(e.detail.value.name ==="")
+      {appInstance.globalData.name=wx.getStorageSync('user_name')}
+    else 
+      appInstance.globalData.name=e.detail.value.name
     appInstance.globalData.password=e.detail.value.password
     console.log(appInstance.globalData) 
 
     try {
-      wx.setStorageSync('user_name',e.detail.value.name )
-      wx.setStorageSync('user_password', e.detail.value.password)
+      wx.setStorageSync('user_name',appInstance.globalData.name )
+      wx.setStorageSync('user_password', appInstance.globalData.password)
   } catch (e) {    
   }
     this.jumpToQR();
   },
 
   jumpToQR:function(){
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/pages/QRcode/QRcode',
     })
   },

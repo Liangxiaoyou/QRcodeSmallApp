@@ -1,7 +1,10 @@
 <view class="container1">
-  <text>介绍文档</text>
-  <text>小程序可生成用户指定用户名、口令和时间的二维吗</text>
-  <text>初始口令默认为123456</text>
+  <text></text>
+  <text>可生成用户指定的二维码</text>
+  <text>二维码包含用户名和密码的哈希值</text>
+  <text>同时和时间实时关联</text>
+  <text>可尝试用于身份验证</text>
+  <text>\n</text>
   <text>本项目用于课程作业</text>
   <text>且不会获取任何个人信息</text>
 </view>

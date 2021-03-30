@@ -32,13 +32,13 @@ Page({
   },
 
 jumpToIntro:function(){
-  wx.navigateTo({
+  wx.redirectTo({
     url: '/pages/introduction/introduction',
   })
 },
 
 jumpToChange:function(){
-  wx.navigateTo({
+  wx.redirectTo({
     url: '/pages/changePassword/changePassword',
   })
 },
@@ -65,7 +65,7 @@ setCanvasSize: function () {
     // Do something when catch error
     console.log("获取设备信息失败" + e);
   }
-  console.log(size);
+  //console.log(size);
   return size;
 },
 
