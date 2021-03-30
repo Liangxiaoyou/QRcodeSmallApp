@@ -4,6 +4,7 @@
   <text>身份码码包含用户名和密码的哈希值</text>
   <text>同时和时间实时关联</text>
   <text>可尝试用于身份验证</text>
+  <text>目前只支持英文和数字</text>
   <text>\n</text>
   <text>本项目用于课程作业</text>
   <text>且不会获取任何个人信息</text>
