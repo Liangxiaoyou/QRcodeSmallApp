@@ -34,4 +34,9 @@ Page({
       url: '/pages/QRcode/QRcode',
     })
   },
+  back:function(){
+    wx.redirectTo({
+      url: '/pages/QRcode/QRcode',
+    })
+  },
 })

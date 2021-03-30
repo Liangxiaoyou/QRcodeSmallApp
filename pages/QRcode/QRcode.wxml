@@ -7,7 +7,7 @@
     </view>
    
     <view  >
-        <button type="primary" bindtap="showQR">生成二维码</button>
+        <button type="primary" bindtap="showQR">生成身份码</button>
         <button bindtap="jumpToChange">设置</button>
         <button bindtap="jumpToIntro">小程序说明</button>
     </view>
