@@ -19,7 +19,7 @@
     "compileHotReLoad": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
-    "useApiHostProcess": false,
+    "useApiHostProcess": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -35,6 +35,6 @@
     "packNpmRelationList": [],
     "minifyWXSS": true
   },
-  "appid": "wx57c98fd28d30f865",
+  "appid": "wxc855596a3b742a49",
   "condition": {}
 }
