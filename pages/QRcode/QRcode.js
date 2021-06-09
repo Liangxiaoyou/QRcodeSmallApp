@@ -12,6 +12,7 @@ Page({
 
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
+    var appInstance = getApp()
     var size = this.setCanvasSize() //动态设置画布大小
     var initUrl = this.data.info
     var that = this;//用this不行，为啥，是为了安全么？
@@ -26,9 +27,14 @@ Page({
       that.setData({
         timeNum : newTime,
       });
+      appInstance.globaldata.userPosition = 1;
       
     },1000)
     this.showQR()
+  },
+
+  onHide:function(options){
+
   },
 
 jumpToIntro:function(){
@@ -105,6 +111,7 @@ showQR:function(){
   that.setData({
     maskHidden: false,
   });
+  
   wx.showToast({
     title: '生成中...',
     icon: 'loading',
